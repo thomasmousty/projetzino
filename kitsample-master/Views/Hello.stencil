@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Super Chat</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+// Formulaire pour envoyer le message avec un Username et un Message
+
+<form action="/chat" method="POST">
+    <input type="text" name="user" textholder="USERNAME">
+    <input type="text" name="message" textholder="VOTRE MESSAGE">
+    <input type="submit" value="Envoyez">
+</form>
+
+<table>
+	<tbody>
+
+		// Affichage des messages un par un
+
+		{% for SuperMessages in myMessages %}
+		<tr>
+			<td>{{ SuperMessages.user }}</td>
+			<td>{{ SuperMessages.message }}</td>
+		</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+</body>
+</html>
+
+
+
